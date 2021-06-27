@@ -24,20 +24,14 @@ require __DIR__ . "/dischi.php";
     <header class="bg-sy-lightgrey position-relative">
 
     </header>
-    <div class="d-flex justify-content-center">
+    <div id="app" class="d-flex justify-content-center">
         <div class="disk-row d-flex flex-row justify-content-start">
-            <?php
-
-            foreach ($database as $disk) :
-
-            ?>
-                <div class="disk-card bg-sy-lightgrey text-center">
-                    <img class="album-thumbnail" src="<?=$disk["poster"] ?>" alt="">
-                    <h4 class="text-white font-weight-bold text-uppercase"><?=$disk["title"] ?></h4>
-                    <h6 class="text-sy-lightergrey font-weight-bold"><?=$disk["author"] ?></h6>
-                    <h6 class="text-sy-lightergrey font-weight-bold"><?=$disk["year"] ?></h6>
+                <div class="disk-card bg-sy-lightgrey text-center" v-for="disk in disks">
+                    <img class="album-thumbnail" :src="disk.poster" alt="">
+                    <h4 class="text-white font-weight-bold text-uppercase">{{disk.title}}</h4>
+                    <h6 class="text-sy-lightergrey font-weight-bold">{{disk.author}}</h6>
+                    <h6 class="text-sy-lightergrey font-weight-bold">{{disk.year}}</h6>
                 </div>
-            <?php endforeach; ?>
         </div>
     </div>
 
@@ -46,6 +40,7 @@ require __DIR__ . "/dischi.php";
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <!-- Axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
