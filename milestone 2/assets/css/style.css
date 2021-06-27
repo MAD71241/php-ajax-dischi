@@ -1,0 +1,56 @@
+/* REGOLE GENERALI DI STILE */
+
+.text-white {
+    color: white;
+}
+
+.bg-sy-lightgrey {
+    background-color: #2E3A46;
+}
+
+.text-lightgrey {
+    color: #2E3A46;
+}
+
+.bg-sy-grey {
+    background-color: #1E2D3B;
+}
+
+.text-sy-lightergrey {
+    color: #777D79;
+}
+
+#app {
+    margin: 100px 0;
+}
+
+select {
+    top: 15px;
+    left: 15px;
+}
+
+/* HEADER */
+
+header {
+    height: 80px;
+    width: 100%;
+}
+
+/* DISK CONTAINER E CARD */
+
+.disk-row {
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.disk-card {
+    width: 200px;
+    height: 350px;
+    margin: 10px;
+}
+
+.album-thumbnail {
+    width: 180px;
+    height: 180px;
+    margin: 10px;
+}
